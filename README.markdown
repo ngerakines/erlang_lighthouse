@@ -1,4 +1,3 @@
-
 erlang\_lighthouse is an Erlang client library to interface with the lighthouseapp.com API.
 
 **This is ALPHA software and is actively being developed and changed. Do Not Use.**
@@ -46,4 +45,4 @@ The two value tuple is used for username and password authentication
 
 **Note**: This library requires r12-5 or later.
 
-Please use http://socklabs.lighthouseapp.com/projects/23169-erlang_lighthouse/overview for any issues or questions for this library.
+Please use http://socklabs.lighthouseapp.com/projects/23169-erlang\_lighthouse/overview for any issues or questions for this library.
