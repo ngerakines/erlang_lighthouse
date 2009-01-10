@@ -6,6 +6,7 @@ erlang\_lighthouse is an Erlang client library to interface with the lighthousea
 ## Features
 
  * Can support multiple forms of authentication including username/password combinations as well as API keys.
+ * Has a really simple interface to automate common items easily.
 
 ## Use
 
@@ -31,6 +32,15 @@ The two value tuple is used for username and password authentication
               [{project,[],
                         [{archived,[{type,"boolean"}],["false"]},
                          {'created-at',[{type,"datetime"}], ... }
+    3> lighthouse:create_ticket("socklabs", {"APIKEY123"}, "23169-erlang_lighthouse", "Update bobbles").
+    {ticket,[],
+            [{'assigned-user-id',[{type,"integer"},{nil,"true"}],[]},
+             {'attachments-count',[{type,"integer"}],["0"]}, ... }
+    4> lighthouse:create_ticket("socklabs", {"APIKEY123"}, "23169-erlang_lighthouse", "Update bobbles", [{"user", "26027"}, {"milestone", "28145-01"}]).
+    {ticket,[],
+            [{'assigned-user-id',[{type,"integer"}],["26027"]},
+             {'attachments-count',[{type,"integer"}],["0"]},
+             {closed,[{type,"boolean"}],["false"]}, ... }
 
 ## Support
 
